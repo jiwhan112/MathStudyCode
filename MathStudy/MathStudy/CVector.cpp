@@ -34,12 +34,18 @@ float CVector::Length()
 CVector CVector::Normalize()
 {
 	const float length = Length();
-	float _length = 1 / (length* length);
+	float _length = 1 / (length);
 	float _x, _y, _z;
 	_x = x * _length;
 	_y = y * _length;
 	_z = z * _length;
 	return CVector(_x, _y, _z);
+}
+
+CVector CVector::Scale(float k)
+{
+	return CVector(k*x, k*y, k*z);
+
 }
 
 void CVector::operator=(const CVector & rhs)
@@ -48,3 +54,14 @@ void CVector::operator=(const CVector & rhs)
 	y = rhs.y;
 	z = rhs.z;
 }
+
+CVector CVector::operator+(const CVector & rhs)
+{
+	return CVector(x + rhs.x, y + rhs.y, z + rhs.z);
+}
+
+CVector CVector::operator-(const CVector & rhs)
+{
+	return CVector(x - rhs.x, y - rhs.y, z - rhs.z);
+}
+
