@@ -65,3 +65,8 @@ CVector CVector::operator-(const CVector & rhs)
 	return CVector(x - rhs.x, y - rhs.y, z - rhs.z);
 }
 
+float CVector::Dot(const CVector & rhs)
+{
+	return x * rhs.x + y * rhs.y + z * rhs.z;
+}
+

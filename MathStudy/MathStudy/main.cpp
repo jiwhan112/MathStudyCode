@@ -29,6 +29,4 @@ void VectorTest()
 void main()
 {
 	VectorTest();
-	
-
 }

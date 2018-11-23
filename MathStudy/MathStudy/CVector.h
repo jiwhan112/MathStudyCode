@@ -21,6 +21,9 @@ public:
 	CVector operator+(const CVector& rhs); // µ¡¼À
 	CVector operator-(const CVector& rhs); // »¬¼À
 
+	// Dot º¤ÅÍÀÇ ¼ººÐÀ» ¸ðµÎ °öÇÑ °ª
+	// A¡ÜB = ||A|| ||B||cos¥è
+	float Dot(const CVector& rhs);
 };
 
 #endif
